@@ -1,0 +1,852 @@
+{
+  "version": "32.0.0",
+  "artifacts": {
+    "Stack1.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Stack1.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Stack1": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://992382612958/us-east-1",
+      "properties": {
+        "templateFile": "Stack1.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::992382612958:role/cdk-hnb659fds-deploy-role-992382612958-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::992382612958:role/cdk-hnb659fds-cfn-exec-role-992382612958-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-992382612958-us-east-1/f6fb0ed570387ac307c7f91e3670e190a1fb8ad6ec00784ad4c1a81fa5c4bd90.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Stack1.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::992382612958:role/cdk-hnb659fds-lookup-role-992382612958-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Stack1.assets"
+      ],
+      "metadata": {
+        "/Stack1/siteCertificate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteCertificate6B9C42D6"
+          }
+        ],
+        "/Stack1/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Stack1/ExportsWritereuwest142AF533A/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsWritereuwest142AF533A3E3B99E4"
+          }
+        ],
+        "/Stack1/Custom::CrossRegionExportWriterCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCrossRegionExportWriterCustomResourceProviderRoleC951B1E1"
+          }
+        ],
+        "/Stack1/Custom::CrossRegionExportWriterCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCrossRegionExportWriterCustomResourceProviderHandlerD8786E8A"
+          }
+        ],
+        "/Stack1/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Stack1/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Stack1"
+    },
+    "FullStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "FullStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "FullStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://992382612958/eu-west-1",
+      "properties": {
+        "templateFile": "FullStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::992382612958:role/cdk-hnb659fds-deploy-role-992382612958-eu-west-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::992382612958:role/cdk-hnb659fds-cfn-exec-role-992382612958-eu-west-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-992382612958-eu-west-1/cc07ad34e9f3a55b8cb29611f2f48bc6ca52beca4358abad73d65541d383d7ad.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "FullStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::992382612958:role/cdk-hnb659fds-lookup-role-992382612958-eu-west-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Stack1",
+        "FullStack.assets"
+      ],
+      "metadata": {
+        "/FullStack/UserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPool6BA7E5F2"
+          }
+        ],
+        "/FullStack/UserPool/AppClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolAppClientDD0407EC"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApi6F145F59"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiDeploymentE6C7B14B3db8dcef809aa83ed0c7d62dd97dcc5f"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiDeploymentStageprodEA127565"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiEndpointBBC1D636"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiOPTIONSF87E2E8C"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauth4F918273"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthOPTIONSB7D5DB23"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignup2FA1E77F"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signup/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignupOPTIONSB3E2B959"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signup/POST/ApiPermission.FullStackAuthServiceApi16373964.POST..auth.signup": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignupPOSTApiPermissionFullStackAuthServiceApi16373964POSTauthsignup507FB800"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signup/POST/ApiPermission.Test.FullStackAuthServiceApi16373964.POST..auth.signup": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignupPOSTApiPermissionTestFullStackAuthServiceApi16373964POSTauthsignup222D7310"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signup/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignupPOST07EFAAC5"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/confirm_signup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthconfirmsignup53051378"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/confirm_signup/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthconfirmsignupOPTIONSF4E3A721"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/confirm_signup/POST/ApiPermission.FullStackAuthServiceApi16373964.POST..auth.confirm_signup": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthconfirmsignupPOSTApiPermissionFullStackAuthServiceApi16373964POSTauthconfirmsignup36E37473"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/confirm_signup/POST/ApiPermission.Test.FullStackAuthServiceApi16373964.POST..auth.confirm_signup": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthconfirmsignupPOSTApiPermissionTestFullStackAuthServiceApi16373964POSTauthconfirmsignup4943B779"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/confirm_signup/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthconfirmsignupPOSTBF26C81A"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signout/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignout9DEA4640"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signout/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignoutOPTIONSCB5E990F"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signout/GET/ApiPermission.FullStackAuthServiceApi16373964.GET..auth.signout": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignoutGETApiPermissionFullStackAuthServiceApi16373964GETauthsignout4D294491"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signout/GET/ApiPermission.Test.FullStackAuthServiceApi16373964.GET..auth.signout": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignoutGETApiPermissionTestFullStackAuthServiceApi16373964GETauthsignout212BB55E"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signout/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsignoutGETC75DA49A"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signin/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsigninAC698811"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signin/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsigninOPTIONS4CCAC799"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signin/POST/ApiPermission.FullStackAuthServiceApi16373964.POST..auth.signin": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsigninPOSTApiPermissionFullStackAuthServiceApi16373964POSTauthsignin60E5E337"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signin/POST/ApiPermission.Test.FullStackAuthServiceApi16373964.POST..auth.signin": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsigninPOSTApiPermissionTestFullStackAuthServiceApi16373964POSTauthsignin9FC762DB"
+          }
+        ],
+        "/FullStack/AuthServiceApi/AuthServiceApi/Default/auth/signin/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiauthsigninPOSTC78F9AEC"
+          }
+        ],
+        "/FullStack/AuthServiceApi/SignupFn/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiSignupFnServiceRole449F516A"
+          }
+        ],
+        "/FullStack/AuthServiceApi/SignupFn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiSignupFn42E54DA2"
+          }
+        ],
+        "/FullStack/AuthServiceApi/ConfirmFn/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiConfirmFnServiceRole2967189E"
+          }
+        ],
+        "/FullStack/AuthServiceApi/ConfirmFn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiConfirmFn0A585E3D"
+          }
+        ],
+        "/FullStack/AuthServiceApi/SignoutFn/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiSignoutFnServiceRole47081A24"
+          }
+        ],
+        "/FullStack/AuthServiceApi/SignoutFn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiSignoutFn0B9011EB"
+          }
+        ],
+        "/FullStack/AuthServiceApi/SigninFn/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiSigninFnServiceRole63D70D3D"
+          }
+        ],
+        "/FullStack/AuthServiceApi/SigninFn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceApiSigninFnD683380D"
+          }
+        ],
+        "/FullStack/APIApp/MovieReviewsTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "APIAppMovieReviewsTableCF3E08B0"
+            }
+          }
+        ],
+        "/FullStack/APIApp/MovieReviewsTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppMovieReviewsTableCF3E08B0"
+          }
+        ],
+        "/FullStack/APIApp/GetReviewbyMovieId/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppGetReviewbyMovieIdServiceRoleFDF44D39"
+          }
+        ],
+        "/FullStack/APIApp/GetReviewbyMovieId/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppGetReviewbyMovieIdServiceRoleDefaultPolicy9FD5CADB"
+          }
+        ],
+        "/FullStack/APIApp/GetReviewbyMovieId/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppGetReviewbyMovieId9EEC685C"
+          }
+        ],
+        "/FullStack/APIApp/getreviewbyreviewernameformovie/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppgetreviewbyreviewernameformovieServiceRole22A3CA1C"
+          }
+        ],
+        "/FullStack/APIApp/getreviewbyreviewernameformovie/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppgetreviewbyreviewernameformovieServiceRoleDefaultPolicy96F93918"
+          }
+        ],
+        "/FullStack/APIApp/getreviewbyreviewernameformovie/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppgetreviewbyreviewernameformovie4B4F2219"
+          }
+        ],
+        "/FullStack/APIApp/getallreviewsbyreviewer/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppgetallreviewsbyreviewerServiceRole1C8224B4"
+          }
+        ],
+        "/FullStack/APIApp/getallreviewsbyreviewer/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppgetallreviewsbyreviewerServiceRoleDefaultPolicy6503B2C3"
+          }
+        ],
+        "/FullStack/APIApp/getallreviewsbyreviewer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppgetallreviewsbyreviewer146E067B"
+          }
+        ],
+        "/FullStack/APIApp/addmoviereview/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppaddmoviereviewServiceRole082B3CF4"
+          }
+        ],
+        "/FullStack/APIApp/addmoviereview/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppaddmoviereviewServiceRoleDefaultPolicy3A5AD4D6"
+          }
+        ],
+        "/FullStack/APIApp/addmoviereview/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppaddmoviereview356ADBD4"
+          }
+        ],
+        "/FullStack/APIApp/updatemoviereview/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppupdatemoviereviewServiceRole16094A42"
+          }
+        ],
+        "/FullStack/APIApp/updatemoviereview/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppupdatemoviereviewServiceRoleDefaultPolicy7C854A4E"
+          }
+        ],
+        "/FullStack/APIApp/updatemoviereview/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppupdatemoviereviewC4F2A49F"
+          }
+        ],
+        "/FullStack/APIApp/gettranslatedreview/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppgettranslatedreviewServiceRoleBAB85FF4"
+          }
+        ],
+        "/FullStack/APIApp/gettranslatedreview/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppgettranslatedreviewServiceRoleDefaultPolicy61F00D16"
+          }
+        ],
+        "/FullStack/APIApp/gettranslatedreview/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppgettranslatedreview94A74F00"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPI0F18CC78"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIDeployment3F555126839687ea1d4c423fdd47f6deead3c69e"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIDeploymentStageprodABBBAFC4"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIEndpoint2304DB74"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIOPTIONS9411A148"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImovies544371D1"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesOPTIONSFED0953F"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieId4BA5964C"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdOPTIONSC98452D7"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviews13936A41"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsOPTIONSF9198431"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/POST/ApiPermission.FullStackAPIAppRestAPI2EC405CA.POST..movies.{movieId}.reviews": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsPOSTApiPermissionFullStackAPIAppRestAPI2EC405CAPOSTmoviesmovieIdreviews852405FD"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/POST/ApiPermission.Test.FullStackAPIAppRestAPI2EC405CA.POST..movies.{movieId}.reviews": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsPOSTApiPermissionTestFullStackAPIAppRestAPI2EC405CAPOSTmoviesmovieIdreviews0DB86029"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsPOST377A8AE6"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/GET/ApiPermission.FullStackAPIAppRestAPI2EC405CA.GET..movies.{movieId}.reviews": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsGETApiPermissionFullStackAPIAppRestAPI2EC405CAGETmoviesmovieIdreviews252A213C"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/GET/ApiPermission.Test.FullStackAPIAppRestAPI2EC405CA.GET..movies.{movieId}.reviews": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsGETApiPermissionTestFullStackAPIAppRestAPI2EC405CAGETmoviesmovieIdreviewsD54D7B96"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsGET89D7BFEA"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/{Parameter}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsParameter8045AA3A"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/{Parameter}/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsParameterOPTIONS37483DF5"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/{Parameter}/GET/ApiPermission.FullStackAPIAppRestAPI2EC405CA.GET..movies.{movieId}.reviews.{Parameter}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsParameterGETApiPermissionFullStackAPIAppRestAPI2EC405CAGETmoviesmovieIdreviewsParameterC8BB0742"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/{Parameter}/GET/ApiPermission.Test.FullStackAPIAppRestAPI2EC405CA.GET..movies.{movieId}.reviews.{Parameter}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsParameterGETApiPermissionTestFullStackAPIAppRestAPI2EC405CAGETmoviesmovieIdreviewsParameter0F4232E2"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/{Parameter}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsParameterGET0A6FF651"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/{Parameter}/PUT/ApiPermission.FullStackAPIAppRestAPI2EC405CA.PUT..movies.{movieId}.reviews.{Parameter}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsParameterPUTApiPermissionFullStackAPIAppRestAPI2EC405CAPUTmoviesmovieIdreviewsParameterCEAE80AE"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/{Parameter}/PUT/ApiPermission.Test.FullStackAPIAppRestAPI2EC405CA.PUT..movies.{movieId}.reviews.{Parameter}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsParameterPUTApiPermissionTestFullStackAPIAppRestAPI2EC405CAPUTmoviesmovieIdreviewsParameter8234C588"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/movies/{movieId}/reviews/{Parameter}/PUT/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPImoviesmovieIdreviewsParameterPUT21BDBECA"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsD93B1B82"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsOPTIONS74F17787"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNameE712C45D"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNameOPTIONS59EBD125"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/GET/ApiPermission.FullStackAPIAppRestAPI2EC405CA.GET..reviews.{ReviewerName}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNameGETApiPermissionFullStackAPIAppRestAPI2EC405CAGETreviewsReviewerName032E56CE"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/GET/ApiPermission.Test.FullStackAPIAppRestAPI2EC405CA.GET..reviews.{ReviewerName}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNameGETApiPermissionTestFullStackAPIAppRestAPI2EC405CAGETreviewsReviewerName12AFDF11"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNameGET0DC8FE52"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/{movieId}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNamemovieId228576B3"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/{movieId}/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNamemovieIdOPTIONSFA45103A"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/{movieId}/translation/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNamemovieIdtranslationF34904D1"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/{movieId}/translation/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNamemovieIdtranslationOPTIONS5844863C"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/{movieId}/translation/GET/ApiPermission.FullStackAPIAppRestAPI2EC405CA.GET..reviews.{ReviewerName}.{movieId}.translation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNamemovieIdtranslationGETApiPermissionFullStackAPIAppRestAPI2EC405CAGETreviewsReviewerNamemovieIdtranslation4892C5B7"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/{movieId}/translation/GET/ApiPermission.Test.FullStackAPIAppRestAPI2EC405CA.GET..reviews.{ReviewerName}.{movieId}.translation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNamemovieIdtranslationGETApiPermissionTestFullStackAPIAppRestAPI2EC405CAGETreviewsReviewerNamemovieIdtranslation5DBE53F8"
+          }
+        ],
+        "/FullStack/APIApp/RestAPI/Default/reviews/{ReviewerName}/{movieId}/translation/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppRestAPIreviewsReviewerNamemovieIdtranslationGETEF1B1608"
+          }
+        ],
+        "/FullStack/APIApp/moviereviewsddbInitData/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppmoviereviewsddbInitData2B42D435"
+          }
+        ],
+        "/FullStack/APIApp/moviereviewsddbInitData/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIAppmoviereviewsddbInitDataCustomResourcePolicyC28D4B43"
+          }
+        ],
+        "/FullStack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+          }
+        ],
+        "/FullStack/AWS679f53fac002430cb0da5b7982bd2287/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd22872D164C4C"
+          }
+        ],
+        "/FullStack/FrontendApp/SiteBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FrontendAppSiteBucketBD02B2B2"
+          }
+        ],
+        "/FullStack/FrontendApp/SiteBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FrontendAppSiteBucketPolicy86BEB19B"
+          }
+        ],
+        "/FullStack/FrontendApp/SiteBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FrontendAppSiteBucketAutoDeleteObjectsCustomResourceF8D8704D"
+          }
+        ],
+        "/FullStack/FrontendApp/OriginAccessIdentity/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FrontendAppOriginAccessIdentityD2158E76"
+          }
+        ],
+        "/FullStack/FrontendApp/SiteDistribution/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FrontendAppSiteDistribution9C4BED0A"
+          }
+        ],
+        "/FullStack/FrontendApp/WWWSiteAliasRecord/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FrontendAppWWWSiteAliasRecord37FD9DE3"
+          }
+        ],
+        "/FullStack/FrontendApp/DeployWebsite/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FrontendAppDeployWebsiteAwsCliLayerA441D435"
+          }
+        ],
+        "/FullStack/FrontendApp/DeployWebsite/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FrontendAppDeployWebsiteCustomResourceA6CB5F62"
+          }
+        ],
+        "/FullStack/FrontendApp/DistributionDomain": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FrontendAppDistributionDomain6035C99B"
+          }
+        ],
+        "/FullStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/FullStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/FullStack/AWSCloudFrontPartitionHostedZoneIdMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCloudFrontPartitionHostedZoneIdMap"
+          }
+        ],
+        "/FullStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/FullStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/FullStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/FullStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/FullStack/ExportsReader/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsReader8B249524"
+          }
+        ],
+        "/FullStack/Custom::CrossRegionExportReaderCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCrossRegionExportReaderCustomResourceProviderRole10531BBD"
+          }
+        ],
+        "/FullStack/Custom::CrossRegionExportReaderCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCrossRegionExportReaderCustomResourceProviderHandler46647B68"
+          }
+        ],
+        "/FullStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/FullStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "FullStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
